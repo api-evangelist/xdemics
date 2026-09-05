@@ -1,0 +1,59 @@
+generated: '2026-09-04'
+method: probed
+source: >-
+  Anonymous HTTPS probes of the named /.well-known/ path list against every host this
+  record knows. XDemics publishes no API, so there is no API host or docs host to probe
+  beyond the corporate site (www.xdemics.com, a Webflow-hosted marketing site) and its
+  apex (xdemics.com, which 301s to www).
+note: >-
+  Every probed path returned 404. The Webflow edge answers every /.well-known/* request
+  with a fixed 88-byte HTML body reading "Invalid .well-known request" — a genuine miss,
+  not an SPA catch-all returning 200. Recorded as an absence; NO WellKnown or SecurityTxt
+  pointer is emitted, because nothing was served.
+hosts:
+- host: www.xdemics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: xdemics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

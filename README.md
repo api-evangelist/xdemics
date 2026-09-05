@@ -64,5 +64,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-XDemics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/xdemics_stock/
+XDemics Corporation is a Caltech and City of Hope spin-out in San Rafael, California that
+develops High Density Cell Respiration (HDCR) cell-culture hardware for biomedical research
+and biomanufacturing. Its gas-permeable Expansify cultureware and the Profusion bioreactor
+line under development let mammalian cells reach 10-100X higher densities than conventional
+flasks and plates, for CAR-T and cell therapy, viral vector production, stem cell and
+regenerative medicine, drug screening and biologics workflows.
+
+**XDemics publishes no public API.** This profile records that as a measured absence, not an
+oversight. Contract discovery was run on 2026-09-04 against `www.xdemics.com` and `xdemics.com`
+— OpenAPI/Swagger/GraphQL/MCP/A2A paths and the named `/.well-known/` list all returned 404,
+and no `api.`, `developer.`, `docs.`, `app.`, `portal.` or `status.` subdomain resolves in DNS.
+See `x-coverage` in `apis.yml` and `well-known/xdemics-well-known.yml` for the probe record.
+
+- https://www.xdemics.com/
+- https://www.linkedin.com/company/xdemics-corporation

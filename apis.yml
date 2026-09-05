@@ -1,16 +1,35 @@
 aid: xdemics
 name: XDemics
-description: 'XDemics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'XDemics Corporation is a Caltech and City of Hope spin-out in San Rafael,
+  California that develops High Density Cell Respiration (HDCR) cell-culture hardware
+  for biomedical research and biomanufacturing. Its gas-permeable, tissue-mimicking
+  Expansify cultureware — a 24-well plate and a single-well plate — and its Profusion
+  bioreactor line under development let mammalian cells reach 10-100X higher densities
+  than conventional flasks and plates, targeting CAR-T and cell therapy, viral vector
+  production, stem cell and regenerative medicine, drug screening, and biologics
+  workflows. The company sells physical laboratory consumables and instrumentation,
+  distributed through VWR, and its biological testing laboratories sit at the Buck
+  Institute in Novato. It is a hardware and life-science company, not a software
+  company: it publishes no public API, SDK, developer portal, or machine-readable
+  specification of any kind.'
+image: https://cdn.prod.website-files.com/67d1078fe4c4695ced4cb783/67ed9a56129717ba3602ecdb_Open%20Graph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/xdemics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: no-public-api-surface
 specificationVersion: '0.20'
 created: '2026-09-04'
 modified: '2026-09-04'
 tags:
+- Biotechnology
+- Life Sciences
+- Cell Culture
+- Bioprocessing
+- Cell and Gene Therapy
+- Laboratory Equipment
+- Manufacturing
+- Hardware
 - Company
 apis: []
 maintainers:
@@ -19,5 +38,44 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/xdemics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/xdemics_stock/
+  url: https://www.xdemics.com/
+- type: Blog
+  url: https://www.xdemics.com/news
+- type: PrivacyPolicy
+  url: https://www.xdemics.com/privacy-policy
+- type: TermsOfService
+  url: https://www.xdemics.com/terms-of-use
+- type: About
+  url: https://www.xdemics.com/about-us
+- type: LinkedIn
+  url: https://www.linkedin.com/company/xdemics-corporation
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: XDemics sells physical HDCR cultureware and bioreactors — its entire nine-page
+    Webflow site is product, news, team and protocol pages with no developer, API or
+    integrations section, no api/developer/docs subdomain resolves in DNS, and every
+    OpenAPI and .well-known discovery path on xdemics.com returns the Webflow 404 or
+    the fixed "Invalid .well-known request" body.
+  evidence:
+  - url: https://www.xdemics.com/openapi.json
+    status: 404
+  - url: https://www.xdemics.com/llms.txt
+    status: 404
+  - url: https://www.xdemics.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.xdemics.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.xdemics.com/sitemap.xml
+    status: 200
+  - url: https://www.xdemics.com/about-us
+    status: 200
+  checked: '2026-09-04'
